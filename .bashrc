@@ -102,4 +102,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+export P4PORT=scm.factset.com:1666
+export P4CONFIG=.p4rc
+export P4EDITOR='vim -S ~/myscripts/perf.vim'
+
+set -o vi
 export EDITOR=vim
+
+alias ls='ls --color=always'
+alias bigvim='gvim +"set gfn=Bitstream\ Vera\ Sans\ Mono\ 24"'
+
+export PS1="\e[0;32m\w \$\e[m "
