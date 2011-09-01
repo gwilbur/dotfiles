@@ -1,16 +1,8 @@
 syntax on
 colorscheme evening
 set noswapfile
-
-if has("win32")
-  set nonumber
-else
-  set number
-endif
-
-"folding stuff
-set foldmethod=indent
-set foldlevelstart=99
+set number
+filetype plugin on
 
 "see :help guioptions
 set guioptions=egLt
@@ -20,21 +12,6 @@ set autoindent
 set expandtab
 set softtabstop=2
 set shiftwidth=2
-
-if has("win32")
-  set concealcursor=nc
-endif
-
-"autocommands
-if !exists("autocommands_loaded")
-  let autocommands_loaded = 1
-  "add $ to comments for dcl
-  au BufEnter *.com set comments=n:$,n:! formatoptions+=r
-  "use tabs not spaces in makefiles
-  au BufEnter Makefile set noexpandtab
-  au BufEnter Makefile set noexpandtab softtabstop=0
-  au BufEnter *.wiki set textwidth=80
-endif
 
 "automatically close (), {}, and [].
 inoremap ( ()<Left>
@@ -136,14 +113,3 @@ if has("unix")
 elseif has("win32")
   set guifont=Courier_New:h10:cANSI
 endif
-
-"make sure backspace works
-set backspace=2
-
-"vimwiki stuff
-if has("win32")
-  filetype plugin on
-  let g:vimwiki_auto_export = 1
-  let g:vimwiki_badsyms     = ' '
-endif
-
