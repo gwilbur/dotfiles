@@ -64,8 +64,8 @@ endfunc
 inoremap <expr> <CR> IndentEmptyPair()
 
 "cycle through tabs using C-h and C-l
-nmap <C-h> gT
-nmap <C-l> gt
+nnoremap <C-h> gT
+nnoremap <C-l> gt
 
 "move tabs left and right using C-S-h and C-S-l
 func! MoveTabLeft()
@@ -87,8 +87,8 @@ func! MoveTabRight()
   endif
 endfunc
 
-nmap <S-h> :exec MoveTabLeft()<CR>
-nmap <S-l> :exec MoveTabRight()<CR>
+nnoremap <S-h> :exec MoveTabLeft()<CR>
+nnoremap <S-l> :exec MoveTabRight()<CR>
 
 "when changing indentation in visual mode, reselect the same text
 vnoremap > >gv
@@ -105,11 +105,16 @@ function! P4Edit()
   endif
 endfunc
 
-nmap <Leader>pe :exec P4Edit()<CR>
+nnoremap <Leader>pe :exec P4Edit()<CR>
+
+"start find/replace with word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 "set font
 if has("unix")
-  set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 elseif has("win32")
   set guifont=Courier_New:h10:cANSI
+elseif has("vms")
+  set guifont=-adobe-courier-medium-r-normal-*-12-*-*-*-m-*-iso8859-15
 endif
