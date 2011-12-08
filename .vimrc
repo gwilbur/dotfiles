@@ -1,10 +1,11 @@
 syntax on
-colorscheme koehler
+filetype plugin indent on
+call pathogen#infect()
+
+colorscheme vividchalk
+
 set noswapfile
 set nonumber
-filetype plugin indent on
-
-call pathogen#infect()
 
 "see :help guioptions
 set guioptions=gLt
