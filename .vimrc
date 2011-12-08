@@ -5,7 +5,7 @@ set number
 filetype plugin on
 
 "see :help guioptions
-set guioptions=egLt
+set guioptions=gLt
 
 "indentation stuff
 set autoindent
