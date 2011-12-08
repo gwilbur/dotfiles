@@ -28,7 +28,6 @@ export EDITOR=vim
 export P4PORT=scm.factset.com:1666
 export P4CONFIG=.p4rc
 export P4EDITOR='vim -S ~/myscripts/perf.vim'
-source /home/fonix/prd_progs/tools/engineering-login.sh
 export UNLOCK_DATABASE_UTILS=1
 export UNLOCK_FDB_UTILS=1
 export PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
