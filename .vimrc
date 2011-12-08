@@ -1,7 +1,7 @@
 syntax on
-colorscheme evening
+colorscheme koehler
 set noswapfile
-set number
+set nonumber
 filetype plugin indent on
 
 call pathogen#infect()
