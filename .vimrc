@@ -2,7 +2,9 @@ syntax on
 colorscheme evening
 set noswapfile
 set number
-filetype plugin on
+filetype plugin indent on
+
+call pathogen#infect()
 
 "see :help guioptions
 set guioptions=gLt
