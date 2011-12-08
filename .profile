@@ -1,6 +1,12 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Load the engineering stuff
+if [ -e /var/cfengine/classes/nextgen ]
+then
+   source /home/fonix/prd_progs/tools/engineering-login.sh
+fi
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
