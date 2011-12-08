@@ -16,6 +16,18 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 
+"clear search hilights
+nnoremap <leader><space> :noh<cr>
+
+"movement by window line not file line
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+"start find/replace with word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 "automatically close (), {}, and [].
 inoremap ( ()<Left>
 inoremap { {}<Left>
@@ -109,9 +121,6 @@ function! P4Edit()
 endfunc
 
 nnoremap <Leader>pe :exec P4Edit()<CR>
-
-"start find/replace with word under cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 "set font
 if has("unix")
