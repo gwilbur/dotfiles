@@ -28,6 +28,9 @@ vnoremap k gk
 "start find/replace with word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+"this is so surround.vim doesn't get rid of this
+xnoremap s s
+
 "automatically close (), {}, and [].
 inoremap ( ()<Left>
 inoremap { {}<Left>
