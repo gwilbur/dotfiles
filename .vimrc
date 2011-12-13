@@ -28,6 +28,10 @@ vnoremap k gk
 "start find/replace with word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+"display list of possible completions
+set wildmenu
+set wildmode=full
+
 "automatically close (), {}, and [].
 inoremap ( ()<Left>
 inoremap { {}<Left>
