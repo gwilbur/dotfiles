@@ -17,7 +17,7 @@ set softtabstop=2
 set shiftwidth=2
 
 "clear search hilights
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :nohlsearch<cr>
 
 "movement by window line not file line
 nnoremap j gj
@@ -31,6 +31,12 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 "display list of possible completions
 set wildmenu
 set wildmode=full
+
+"quick command for :tabnew
+nnoremap <Leader>tn :tabnew<space>
+
+"this is so surround.vim doesn't get rid of this
+xnoremap s s
 
 "automatically close (), {}, and [].
 inoremap ( ()<Left>
