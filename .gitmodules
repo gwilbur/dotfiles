@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/rails"]
 	path = .vim/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/template"]
+	path = .vim/bundle/template
+	url = git://github.com/thinca/vim-template.git
