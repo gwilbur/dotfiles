@@ -22,7 +22,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-export PS1="\[\e[0;32m\]\w \$\[\e[m\] "
+export PS1="\[\e[1;37m\]\w \$\[\e[m\] "
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
