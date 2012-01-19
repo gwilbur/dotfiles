@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/template"]
 	path = .vim/bundle/template
 	url = git://github.com/thinca/vim-template.git
+[submodule ".vim/bundle/ruby-refactoring"]
+	path = .vim/bundle/ruby-refactoring
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
