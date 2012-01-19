@@ -27,6 +27,9 @@ export PS1="\[\e[1;37m\]\w \$\[\e[m\] "
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+alias suf='sudo -u fin_mgr'
+alias revb='perl /home/data/index/script/common/submit_review_board.pl'
+
 set -o vi
 export EDITOR=vim
 
