@@ -92,7 +92,7 @@ inoremap <expr> <CR> IndentEmptyPair()
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
-"move tabs left and right using C-S-h and C-S-l
+"move tabs left and right using S-h and S-l
 func! MoveTabLeft()
   let tab_n = tabpagenr() - 1
   if tab_n == 0
@@ -112,8 +112,8 @@ func! MoveTabRight()
   endif
 endfunc
 
-nnoremap <S-h> :exec MoveTabLeft()<CR>
-nnoremap <S-l> :exec MoveTabRight()<CR>
+nnoremap <S-h> mz:exec MoveTabLeft()<CR>`z
+nnoremap <S-l> mz:exec MoveTabRight()<CR>`z
 
 "when changing indentation in visual mode, reselect the same text
 vnoremap > >gv
