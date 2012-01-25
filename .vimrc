@@ -1,6 +1,9 @@
 syntax on
 filetype plugin indent on
-call pathogen#infect()
+
+if has("unix")
+  call pathogen#infect()
+endif
 
 colorscheme vividchalk
 
@@ -37,56 +40,6 @@ nnoremap <Leader>tn :tabnew<space>
 
 "this is so surround.vim doesn't get rid of this
 xnoremap s s
-
-"automatically close (), {}, and [].
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-
-"typing a ), }, or ] when currently on that character won't add a new one
-function! ClosePair(char)
-  if getline('.')[col('.') - 1] == a:char
-    return "\<Right>"
-  else
-    return a:char
-  endif
-endf
-
-inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap } <c-r>=ClosePair('}')<CR>
-inoremap ] <c-r>=ClosePair(']')<CR>
-
-"deleting the first of an empty pair will delete the other
-func! InAnEmptyPair()
-  let cur = strpart(getline('.'),getpos('.')[2]-2,2)
-  for pair in (split(&matchpairs,',') + ['":"',"':'"])
-    if cur == join(split(pair,':'),'')
-      return 1
-    endif
-  endfor
-  return 0
-endfunc
-
-func! DeleteEmptyPairs()
-  if InAnEmptyPair()
-    return "\<Left>\<Del>\<Del>"
-  else
-    return "\<BS>"
-  endif
-endfunc
-
-inoremap <expr> <BS> DeleteEmptyPairs()
-
-"auto indent after pressing return in an empty pair.
-func! IndentEmptyPair()
-  if InAnEmptyPair()
-    return "\<CR>\<CR>\<Up>\<Tab>"
-  else
-    return "\<CR>"
-  endif
-endfunc
-
-inoremap <expr> <CR> IndentEmptyPair()
 
 "cycle through tabs using C-h and C-l
 nnoremap <C-h> gT
@@ -138,5 +91,5 @@ if has("unix")
 elseif has("win32")
   set guifont=Courier_New:h10:cANSI
 elseif has("vms")
-  set guifont=-adobe-courier-medium-r-normal-*-12-*-*-*-m-*-iso8859-15
+  set guifont=-adobe-courier-medium-r-normal-*-14-*-*-*-m-*-iso8859-15
 endif
