@@ -19,8 +19,28 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 
-"clear search hilights
+"searching stuff
+set ignorecase
+set smartcase
+set incsearch
+set wrapscan
+set scrolloff=4
 nnoremap <leader><space> :nohlsearch<cr>
+
+"display list of possible completions
+set wildmenu
+set wildmode=longest,list
+
+"spelling stuff
+if has("unix")
+  set spell
+  set spelllang=en_us
+  set spellsuggest=best,5
+  highlight clear SpellBad
+  highlight clear SpellCap
+  highlight clear SpellRare
+  highlight clear SpellLocal
+endif
 
 "movement by window line not file line
 nnoremap j gj
@@ -30,10 +50,6 @@ vnoremap k gk
 
 "start find/replace with word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
-"display list of possible completions
-set wildmenu
-set wildmode=full
 
 "quick command for :tabnew
 nnoremap <Leader>tn :tabnew<space>
@@ -83,7 +99,7 @@ function! P4Edit()
   endif
 endfunc
 
-nnoremap <Leader>pe :exec P4Edit()<CR>
+nnoremap <Leader>pe :exec P4Edit()<CR>:w!<CR>
 
 "set font
 if has("unix")
