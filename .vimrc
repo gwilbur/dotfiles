@@ -9,6 +9,7 @@ colorscheme vividchalk
 
 set noswapfile
 set nonumber
+set cursorline
 
 "see :help guioptions
 set guioptions=gLt
@@ -27,6 +28,23 @@ set wrapscan
 set scrolloff=4
 nnoremap <leader><space> :nohlsearch<cr>
 
+"unmap arrow keys and mouse
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+noremap  <Up>    <NOP>
+noremap  <Down>  <NOP>
+noremap  <Left>  <NOP>
+noremap  <Right> <NOP>
+set mouse=
+
+"movement by window line not file line
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
 "display list of possible completions
 set wildmenu
 set wildmode=longest,list
@@ -42,17 +60,14 @@ if has("unix")
   highlight clear SpellLocal
 endif
 
-"movement by window line not file line
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-
 "start find/replace with word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-"quick command for :tabnew
-nnoremap <Leader>tn :tabnew<space>
+"quick command for :tabedit
+nnoremap <Leader>e :tabedit<space>
+
+"mapping for Gundo
+nnoremap <Leader>gu :GundoToggle<CR>
 
 "this is so surround.vim doesn't get rid of this
 xnoremap s s
