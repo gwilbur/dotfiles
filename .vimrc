@@ -10,6 +10,7 @@ colorscheme vividchalk
 set noswapfile
 set nonumber
 set cursorline
+set nocompatible
 
 "see :help guioptions
 set guioptions=gLt
