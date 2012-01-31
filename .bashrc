@@ -28,7 +28,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 alias suf='sudo -u fin_mgr'
+alias find_log='suf /home/fonix/prd_progs/prod/tools/find_log.sh'
 alias revb='perl /home/data/index/script/common/submit_review_board.pl'
+alias rbs='ruby -I/home/fonix/prd_progs/fin/port/rbs /home/fonix/prd_progs/fin/port/rbs/util.rb'
 
 set -o vi
 export EDITOR=vim
