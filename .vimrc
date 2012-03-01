@@ -9,8 +9,11 @@ colorscheme vividchalk
 
 set noswapfile
 set nonumber
-set cursorline
 set nocompatible
+
+if has("gui_running")
+  set cursorline
+endif
 
 "see :help guioptions
 set guioptions=gLt
@@ -39,6 +42,9 @@ noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
 set mouse=
+
+"unmap K
+noremap K <NOP>
 
 "movement by window line not file line
 nnoremap j gj
@@ -118,10 +124,12 @@ endfunc
 nnoremap <Leader>pe :exec P4Edit()<CR>:w!<CR>
 
 "set font
-if has("unix")
-  set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-elseif has("win32")
-  set guifont=Courier_New:h10:cANSI
-elseif has("vms")
-  set guifont=-adobe-courier-medium-r-normal-*-14-*-*-*-m-*-iso8859-15
+if has("gui_running")
+  if has("unix")
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+  elseif has("win32")
+    set guifont=Courier_New:h10:cANSI
+  elseif has("vms")
+    set guifont=-adobe-courier-medium-r-normal-*-14-*-*-*-m-*-iso8859-15
+  endif
 endif
