@@ -5,6 +5,7 @@
 if [ -e /var/cfengine/classes/nextgen ]
 then
    source /home/fonix/prd_progs/tools/engineering-login.sh
+   source /home/dev/fonix/prd_progs/tools/fdb_utils.sh
 fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -30,7 +31,7 @@ alias grep='grep --color=auto'
 alias suf='sudo -u fin_mgr'
 alias find_log='suf /home/fonix/prd_progs/prod/tools/find_log.sh'
 alias revb='perl /home/data/index/script/common/submit_review_board.pl'
-alias rbs='ruby -I/home/fonix/prd_progs/fin/port/rbs /home/fonix/prd_progs/fin/port/rbs/util.rb'
+alias rbs='ruby -I/home/fonix/prd_progs/fin/port/rbs /home/fonix/prd_progs/fin/port/rbs/rbs_util.rb'
 
 set -o vi
 export EDITOR=vim
@@ -43,3 +44,5 @@ export UNLOCK_DATABASE_UTILS=1
 export UNLOCK_FDB_UTILS=1
 export PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
 
+export ref=/home/dev/fonix/online/ref/src
+export reu_logs=/home/fonix/prd_logs/jams/fin/reuters_live

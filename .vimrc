@@ -67,6 +67,9 @@ if has("unix")
   highlight clear SpellLocal
 endif
 
+"use marker folds in log files
+autocmd BufNewFile,BufRead *.log setlocal foldmethod=marker
+
 "start find/replace with word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
