@@ -30,6 +30,7 @@ alias grep='grep --color=auto'
 
 alias suf='sudo -u fin_mgr'
 alias find_log='suf /home/fonix/prd_progs/prod/tools/find_log.sh'
+alias tail_log='~/projects/find_log/tail_log.rb fin_mgr'
 alias revb='perl /home/data/index/script/common/submit_review_board.pl'
 alias rbs='ruby -I/home/fonix/prd_progs/fin/port/rbs /home/fonix/prd_progs/fin/port/rbs/rbs_util.rb'
 
