@@ -67,6 +67,11 @@ if has("unix")
   highlight clear SpellLocal
 endif
 
+"spinner
+let g:spinner_nextitem_key = '<C-j>'
+let g:spinner_previousitem_key = '<C-k>'
+let g:spinner_initial_search_type = 2
+
 "use marker folds in log files
 autocmd BufNewFile,BufRead *.log setlocal foldmethod=marker
 
