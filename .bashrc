@@ -43,3 +43,6 @@ export UNLOCK_DATABASE_UTILS=1
 export UNLOCK_FDB_UTILS=1
 export PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
