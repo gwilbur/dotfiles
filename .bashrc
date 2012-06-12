@@ -51,6 +51,5 @@ export PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-=======
 export ref=/home/dev/fonix/online/ref/src
 export reu_logs=/home/fonix/prd_logs/jams/fin/reuters_live
