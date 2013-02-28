@@ -59,6 +59,8 @@ vnoremap k gk
 set wildmenu
 set wildmode=longest,list
 
+set bg=dark
+
 "spelling stuff
 if has("unix")
   set spell
