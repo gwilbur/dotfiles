@@ -8,6 +8,9 @@ then
    source /home/dev/fonix/prd_progs/tools/fdb_utils.sh
 fi
 
+# alias for running online
+alias guio='fonix_gui_test_harness -mm'
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -49,7 +52,7 @@ export UNLOCK_FDB_UTILS=1
 export PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 export ref=/home/dev/fonix/online/ref/src
 export reu_logs=/home/fonix/prd_logs/jams/fin/reuters_live
