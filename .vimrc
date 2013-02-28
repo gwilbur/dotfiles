@@ -1,12 +1,6 @@
 syntax on
 filetype plugin indent on
 
-if has("unix")
-  call pathogen#infect()
-endif
-
-colorscheme vividchalk
-
 set noswapfile
 set nonumber
 set nocompatible
