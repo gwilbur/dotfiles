@@ -40,9 +40,6 @@ alias rbs='ruby -I/home/fonix/prd_progs/fin/port/rbs /home/fonix/prd_progs/fin/p
 set -o vi
 export EDITOR=vim
 
-export LD_LIBRARY_PATH="/home/user/darnold/opt/lib:$LD_LIBRARY_PATH"
-export PATH="/home/user/darnold/opt/bin:$PATH"
-export MANPATH="/home/user/darnold/opt/share/man:$MANPATH"
 # FDS
 export P4PORT=scm.factset.com:1666
 export P4CONFIG=.p4rc
