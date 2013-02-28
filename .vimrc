@@ -1,6 +1,15 @@
-syntax on
+"Vundle stuff
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-commentary'
 filetype plugin indent on
 
+syntax on
 set noswapfile
 set nonumber
 set nocompatible
@@ -60,11 +69,6 @@ if has("unix")
   highlight clear SpellRare
   highlight clear SpellLocal
 endif
-
-"spinner
-let g:spinner_nextitem_key = '<C-j>'
-let g:spinner_previousitem_key = '<C-k>'
-let g:spinner_initial_search_type = 2
 
 "use marker folds in log files
 autocmd BufNewFile,BufRead *.log setlocal foldmethod=marker
