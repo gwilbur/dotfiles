@@ -72,17 +72,8 @@ if has("unix")
   highlight clear SpellLocal
 endif
 
-"use marker folds in log files
-autocmd BufNewFile,BufRead *.log setlocal foldmethod=marker
-
-"start find/replace with word under cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
 "quick command for :tabedit
 nnoremap <Leader>e :tabedit<space>
-
-"mapping for Gundo
-nnoremap <Leader>gu :GundoToggle<CR>
 
 "this is so surround.vim doesn't get rid of this
 xnoremap s s
@@ -117,19 +108,6 @@ nnoremap <S-l> mz:exec MoveTabRight()<CR>`z
 "when changing indentation in visual mode, reselect the same text
 vnoremap > >gv
 vnoremap < <gv
-
-"automatically perf edit
-function! P4Edit()
-  if has("vms")
-    return '!perf edit %'
-  elseif has("unix")
-    return '!p4 edit %'
-  else
-    return ''
-  endif
-endfunc
-
-nnoremap <Leader>pe :exec P4Edit()<CR>:w!<CR>
 
 "set font
 if has("gui_running")
