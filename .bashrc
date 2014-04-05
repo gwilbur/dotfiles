@@ -23,3 +23,6 @@ alias grep='grep --color=auto'
 
 set -o vi
 export EDITOR=vim
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source /home/gwilbur/.rvm/scripts/rvm
