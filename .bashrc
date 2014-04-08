@@ -21,6 +21,8 @@ export PS1="\[\e[1;37m\]\w \$\[\e[m\] "
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+eval `dircolors .dircolors`
+
 set -o vi
 export EDITOR=vim
 
