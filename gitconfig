@@ -4,8 +4,9 @@
 [alias]
 	br = branch
 	ci = commit
+	co = checkout
+	lg = log --date-order --graph --format=format:'%C(yellow)%h%Creset %C(bold red)(%ci)%Creset %s %C(bold green)- %cn%C(magenta)%d%Creset'
 	po = push origin
 	st = status
-        co = checkout
 [color]
 	ui = true
