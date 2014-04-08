@@ -16,12 +16,20 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-export PS1="\[\e[1;37m\]\w \$\[\e[m\] "
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM='auto'
+export GIT_PS1_SHOWCOLORHINTS=1
+export PROMPT_COMMAND='__git_ps1 "\[\e[1;37m\]\w\[\e[m\]" " \[\e[1;37m\]\$\[\e[m\] " " %s"'
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-eval `dircolors .dircolors`
+if [ -f .dircolors ]
+then
+  eval `dircolors .dircolors`
+fi
 
 set -o vi
 export EDITOR=vim
