@@ -1,3 +1,11 @@
 [user]
 	email = gwilbur@gmail.com
 	name = Greg Wilbur
+[alias]
+	br = branch
+	ci = commit
+	po = push origin
+	st = status
+        co = checkout
+[color]
+	ui = true
