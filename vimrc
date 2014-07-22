@@ -54,11 +54,15 @@ noremap  <Right> <NOP>
 "unmap K
 noremap K <NOP>
 
-"movement by window line not file line
+"swap j/k with gj/gk (movement by window line vs file line)
 nnoremap j gj
+nnoremap gj j
 nnoremap k gk
+nnoremap gk k
 vnoremap j gj
+vnoremap gj j
 vnoremap k gk
+vnoremap gk k
 
 "display list of possible completions
 set wildmenu
@@ -74,6 +78,10 @@ if has("unix")
   highlight clear SpellRare
   highlight clear SpellLocal
 endif
+
+"diff accept left or right then move to next diff
+nnoremap [m :diffget //2<CR>:diffupdate<CR>]czz
+nnoremap ]m :diffget //3<CR>:diffupdate<CR>]czz
 
 "quick command for :tabedit
 nnoremap <Leader>e :tabedit<space>
