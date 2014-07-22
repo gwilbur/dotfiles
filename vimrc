@@ -27,9 +27,6 @@ set laststatus=2
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 
-"see :help guioptions
-set guioptions=gLt
-
 "indentation stuff
 set autoindent
 set expandtab
@@ -44,7 +41,7 @@ set wrapscan
 set scrolloff=4
 nnoremap <leader><space> :nohlsearch<cr>
 
-"unmap arrow keys and mouse
+"unmap arrow keys
 inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
@@ -53,7 +50,6 @@ noremap  <Up>    <NOP>
 noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
-set mouse=
 
 "unmap K
 noremap K <NOP>
