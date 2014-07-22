@@ -7,16 +7,25 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-commentary'
+set background=dark
+set t_Co=16
+Bundle 'altercation/vim-colors-solarized'
+syntax on
+colorscheme solarized
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
 filetype plugin indent on
 
-syntax on
 set noswapfile
 set nonumber
 set nocompatible
+set cursorline
 
-if has("gui_running")
-  set cursorline
-endif
+"airline stuff
+set laststatus=2
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
 
 "see :help guioptions
 set guioptions=gLt
@@ -58,8 +67,6 @@ vnoremap k gk
 "display list of possible completions
 set wildmenu
 set wildmode=longest,list
-
-set bg=dark
 
 "spelling stuff
 if has("unix")
@@ -108,14 +115,3 @@ nnoremap <S-l> mz:exec MoveTabRight()<CR>`z
 "when changing indentation in visual mode, reselect the same text
 vnoremap > >gv
 vnoremap < <gv
-
-"set font
-if has("gui_running")
-  if has("unix")
-    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-  elseif has("win32")
-    set guifont=Courier_New:h10:cANSI
-  elseif has("vms")
-    set guifont=-adobe-courier-medium-r-normal-*-14-*-*-*-m-*-iso8859-15
-  endif
-endif
