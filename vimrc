@@ -51,8 +51,8 @@ noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
 
-"unmap K
-noremap K <NOP>
+"make K work like J
+noremap K kJ
 
 "swap j/k with gj/gk (movement by window line vs file line)
 nnoremap j gj
