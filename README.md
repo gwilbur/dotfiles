@@ -1,10 +1,11 @@
 # dotfiles
 
-Configuration files including .vimrc, .bahsrc, etc. To install, run from this
-directory (backup your own files as necessary):
+Configuration files including .vimrc, .bahsrc, etc.
 
-    ls | grep -v README.md | xargs -I% ln -s `pwd`/% ~/.%
+## Installation
 
-To uninstall:
-
-    ls | grep -v README.md | xargs -I% rm ~/.%
+    $ cd
+    $ git clone git@github.com:gwilbur/dotfiles.git .dotfiles/
+    $ git clone git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    $ cd .dotfiles/
+    $ ls | grep -v README.md | xargs -I% ln -s `pwd`/% ~/.%
