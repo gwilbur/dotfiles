@@ -1,9 +1,9 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
@@ -26,6 +26,7 @@ syntax on
 set noswapfile
 set nonumber
 set cursorline
+set diffopt=filler,vertical
 
 set formatoptions=croanj
 
