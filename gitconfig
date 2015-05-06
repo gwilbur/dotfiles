@@ -1,12 +1,14 @@
 [user]
 	email = gwilbur@gmail.com
 	name = Greg Wilbur
+[core]
+	editor = vim -c 'set splitbelow | Gsplit! diff --cached | wincmd k | resize 10'
 [alias]
 	br = branch
 	ci = commit
 	co = checkout
-	lg = log --date-order --graph --format=format:'%C(yellow)%h%Creset %C(bold red)(%ci)%Creset %s %C(bold green)- %cn%C(magenta)%d%Creset'
-	mt = mergetool
+	lg = log --date-order --date=local --graph --format=format:'%C(yellow)%h%Creset %C(bold red)%cd%Creset%C(bold magenta)%d%Creset%n%n%w(80,8,8)%s%n%b%n%w(0,16)%C(bold green)- %cn%Creset%n'
+	mt = mergetool -y
 	po = push origin
 	st = status
 [color]
