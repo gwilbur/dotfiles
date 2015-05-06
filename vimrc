@@ -1,26 +1,33 @@
-"Vundle stuff
+set nocompatible
+
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-commentary'
-set background=dark
-set t_Co=16
-Bundle 'altercation/vim-colors-solarized'
-syntax on
-colorscheme solarized
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
+set rtp+=~/.vim/bundle/Vundle/
+call vundle#begin()
+Plugin 'gmarik/vundle'
+
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+call vundle#end()
 filetype plugin indent on
+
+"color stuff
+set t_Co=16
+set background=dark
+colorscheme solarized
+syntax on
 
 set noswapfile
 set nonumber
-set nocompatible
 set cursorline
+
+set formatoptions=croanj
 
 "airline stuff
 set laststatus=2
@@ -30,6 +37,7 @@ let g:airline#extensions#tabline#enabled=1
 "indentation stuff
 set autoindent
 set expandtab
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
@@ -38,7 +46,8 @@ set ignorecase
 set smartcase
 set incsearch
 set wrapscan
-set scrolloff=4
+set scrolloff=6
+set hlsearch
 nnoremap <leader><space> :nohlsearch<cr>
 
 "unmap arrow keys

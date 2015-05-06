@@ -34,3 +34,10 @@ fi
 
 set -o vi
 export EDITOR=vim
+
+if [ -d $HOME/.rbenv ]
+then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+fi
