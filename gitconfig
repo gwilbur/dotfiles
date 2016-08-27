@@ -10,6 +10,7 @@
 	lg = log --date-order --date=local --graph --format=format:'%C(yellow)%h%Creset %C(bold red)%cd%Creset%C(bold magenta)%d%Creset%n%n%w(80,8,8)%s%n%b%n%w(0,16)%C(bold green)- %cn%Creset%n'
 	mt = mergetool -y
 	po = push origin
+    pom = push origin master
 	st = status
 [color]
 	ui = true
