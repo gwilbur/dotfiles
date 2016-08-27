@@ -7,15 +7,25 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-ruby/vim-ruby'
+
 call vundle#end()
 filetype plugin indent on
+
+vmap <Enter> <Plug>(EasyAlign)
 
 "color stuff
 set t_Co=16
@@ -25,10 +35,11 @@ syntax on
 
 set noswapfile
 set nonumber
-set cursorline
 set diffopt=filler,vertical
 
-set formatoptions=croanj
+"set formatoptions=croanj
+
+set nojoinspaces
 
 "airline stuff
 set laststatus=2
@@ -38,9 +49,9 @@ let g:airline#extensions#tabline#enabled=1
 "indentation stuff
 set autoindent
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 "searching stuff
 set ignorecase
