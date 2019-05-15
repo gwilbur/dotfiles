@@ -13,15 +13,10 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 filetype plugin indent on
@@ -29,7 +24,6 @@ filetype plugin indent on
 vmap <Enter> <Plug>(EasyAlign)
 
 "color stuff
-set t_Co=16
 set background=dark
 colorscheme solarized
 syntax on
@@ -41,11 +35,6 @@ set diffopt=filler,vertical
 "set formatoptions=croanj
 
 set nojoinspaces
-
-"airline stuff
-set laststatus=2
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
 
 "indentation stuff
 set autoindent
@@ -105,38 +94,8 @@ endif
 nnoremap [m :diffget //2<CR>:diffupdate<CR>]czz
 nnoremap ]m :diffget //3<CR>:diffupdate<CR>]czz
 
-"quick command for :tabedit
-nnoremap <Leader>e :tabedit<space>
-
 "this is so surround.vim doesn't get rid of this
 xnoremap s s
-
-"cycle through tabs using C-h and C-l
-nnoremap <C-h> gT
-nnoremap <C-l> gt
-
-"move tabs left and right using S-h and S-l
-func! MoveTabLeft()
-  let tab_n = tabpagenr() - 1
-  if tab_n == 0
-    exec "tabm" tabpagenr('$') - 1
-  else
-    exec "tabm" tab_n - 1
-  endif
-endfunc
-
-func! MoveTabRight()
-  let tab_n = tabpagenr() - 1
-  let last_tab = tabpagenr('$') - 1
-  if tab_n == last_tab
-    exec "tabm" 0
-  else
-    exec "tabm" tab_n + 1
-  endif
-endfunc
-
-nnoremap <S-h> mz:exec MoveTabLeft()<CR>`z
-nnoremap <S-l> mz:exec MoveTabRight()<CR>`z
 
 "when changing indentation in visual mode, reselect the same text
 vnoremap > >gv
