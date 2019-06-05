@@ -1,54 +1,46 @@
-set nocompatible
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/vim-easy-align'
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+call plug#end()
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-
-call vundle#end()
-filetype plugin indent on
-
-vmap <Enter> <Plug>(EasyAlign)
-
-"color stuff
+"color stuff 
 set background=dark
 colorscheme solarized
 syntax on
 
+"easy-align
+vmap <Enter> <Plug>(EasyAlign)
+
+"misc
+set laststatus=2
 set noswapfile
 set nonumber
 set diffopt=filler,vertical
-
-"set formatoptions=croanj
-
+set scrolloff=6
+set formatoptions=cronbj
 set nojoinspaces
 
 "indentation stuff
 set autoindent
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 
 "searching stuff
 set ignorecase
 set smartcase
 set incsearch
 set wrapscan
-set scrolloff=6
 set hlsearch
 nnoremap <leader><space> :nohlsearch<cr>
 
@@ -74,29 +66,3 @@ vnoremap j gj
 vnoremap gj j
 vnoremap k gk
 vnoremap gk k
-
-"display list of possible completions
-set wildmenu
-set wildmode=longest,list
-
-"spelling stuff
-if has("unix")
-  set spell
-  set spelllang=en_us
-  set spellsuggest=best,5
-  highlight clear SpellBad
-  highlight clear SpellCap
-  highlight clear SpellRare
-  highlight clear SpellLocal
-endif
-
-"diff accept left or right then move to next diff
-nnoremap [m :diffget //2<CR>:diffupdate<CR>]czz
-nnoremap ]m :diffget //3<CR>:diffupdate<CR>]czz
-
-"this is so surround.vim doesn't get rid of this
-xnoremap s s
-
-"when changing indentation in visual mode, reselect the same text
-vnoremap > >gv
-vnoremap < <gv

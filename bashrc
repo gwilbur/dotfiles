@@ -24,7 +24,7 @@ then
   export GIT_PS1_SHOWUNTRACKEDFILES=1
   export GIT_PS1_SHOWUPSTREAM='auto'
   export GIT_PS1_SHOWCOLORHINTS=1
-  export PROMPT_COMMAND='__git_ps1 "\[\e[1;37m\]\w\[\e[m\]" " \[\e[1;37m\]\$\[\e[m\] " " %s"'
+  export PROMPT_COMMAND='__git_ps1 "\[\e[1;37m\]\w\[\e[0m\]" " \[\e[1;37m\]\$\[\e[0m\] " " %s"'
 fi
 
 alias ls='ls --color=auto'
